@@ -1,0 +1,32 @@
+.prototypes_show {
+  overflow: hidden;
+  background-color: white;
+  display: flex;
+  justify-content: flex-end;
+  padding: 40px;
+  overflow: hidden;
+}
+.prototype_1 {
+  .frame {
+    border-radius: 25px;
+    padding: 100px;
+    background-color: #4a4a4a;
+    align-items: center;
+    width: 297px * 3;
+    height: 70vh;
+    max-width: 297px * 3;
+  }
+}
+.welcome {
+  margin-left: 10px;
+  font-family: 'Helvetica';
+  h1 {
+    font-size: 64px;
+    line-height: 75px;
+  }
+  p {
+    max-width: 600px;
+    font-size: 32px;
+    line-height: 32px;
+  }
+}
