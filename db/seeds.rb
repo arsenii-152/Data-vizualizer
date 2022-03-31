@@ -1,11 +1,27 @@
 @prototypes_data = [
   {
     name: 'First',
-    description: 'Trying to randomise and show font'
+    description: 'Trying to randomise and show font (done)'
   },
   {
     name: 'Second',
-    description: 'Trying to randomise colors'
+    description: 'Trying to randomise colors (done)'
+  },
+  {
+    name: 'Third',
+    description: 'Trying to add a button (done)'
+  },
+  {
+    name: 'Fourth',
+    description: 'Trying to add a fade generator with buttons (done) '
+  },
+  {
+    name: 'Пятый',
+    description: 'Кириллические шрифты'
+  },
+  {
+    name: 'Шестой',
+    description: 'Реакт'
   }
 ]
 
