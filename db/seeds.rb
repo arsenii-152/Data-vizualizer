@@ -20,8 +20,8 @@
     description: 'Кириллические шрифты'
   },
   {
-    name: 'Шестой',
-    description: 'Реакт'
+    name: 'Новый первый',
+    description: 'начало'
   }
 ]
 
