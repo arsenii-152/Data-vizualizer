@@ -1,32 +1,77 @@
-.prototypes_show {
+prototypes_show {
   overflow: hidden;
-  background-color: white;
   display: flex;
   justify-content: flex-end;
-  padding: 40px;
   overflow: hidden;
 }
+
 .prototype_1 {
   .frame {
-    border-radius: 25px;
-    padding: 100px;
-    background-color: #4a4a4a;
-    align-items: center;
-    width: 297px * 3;
-    height: 70vh;
-    max-width: 297px * 3;
-  }
-}
-.welcome {
-  margin-left: 10px;
-  font-family: 'Helvetica';
-  h1 {
-    font-size: 64px;
-    line-height: 75px;
-  }
-  p {
-    max-width: 600px;
-    font-size: 32px;
-    line-height: 32px;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+    gap: 40px 20px;
+    .moscow {
+      width: 48%;
+      display: flex;
+      justify-content: center;
+      margin: 0;
+
+      border: solid 1px white;
+      height: 20vh;
+      align-items: center;
+      background-color: #4e4e4e;
+    }
+    .saintspetersburg {
+      width: 48%;
+      display: flex;
+      justify-content: center;
+      margin: 0;
+
+      border: solid 1px white;
+      height: 20vh;
+      align-items: center;
+      background-color: #4e4e4e;
+    }
+    .saratov {
+      width: 30%;
+      display: flex;
+      justify-content: center;
+      height: 20vh;
+      margin: 0;
+
+      border: solid 1px white;
+      align-items: center;
+      background-color: #4e4e4e;
+    }
+    .novosibirsk {
+      width: 30%;
+      display: flex;
+      justify-content: center;
+      height: 20vh;
+      margin: 0;
+
+      border: solid 1px white;
+      align-items: center;
+      background-color: #4e4e4e;
+    }
+    .perm {
+      width: 30%;
+      display: flex;
+      justify-content: center;
+      height: 20vh;
+      margin: 0;
+
+      border: solid 1px white;
+      align-items: center;
+      background-color: #4e4e4e;
+    }
+    h1 {
+      color: white;
+      font-weight: 600;
+    }
   }
 }

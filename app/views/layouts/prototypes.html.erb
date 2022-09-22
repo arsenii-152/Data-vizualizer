@@ -1,52 +1,17 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Data Visualizer</title>
+ <!DOCTYPE html>
+ <html>
+   <head>
+     <title>Data Visualizer</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <link
-       rel="stylesheet"
-       href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
-       integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
-       crossorigin=""
-     />
-     <script
-       src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
-       integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
-       crossorigin=""
-     ></script>
-     <style>
-       #map {
-         height: 180px;
-       }
-     </style>
   </head>
 
-  <body class="prototypes_<%= action_name %>">
-    <div class="">
-      Change the text of the text field
-      ,and then click the button.
-    </div>
+   <body class="prototypes_<%= action_name %>">
 
+     <%= yield %>
 
- <select id="selector">
-   <option value="moscow">Москва</option>
-   <option value="bangcock">Бангкок</option>
-   <option value="seoul" >Сеул</option>
-   <option value="paris" >Париж</option>
-   <option value="chennai">Ченнай</option>
-   <option value="damme" >Дамме</option>
- </select>
-
-     <button id="button" type="button">
-         click me!!
-     </button>
-
-     <p id="selectValue"></p>
-
-    <%= yield %>
-  </body>
-</html>
+   </body>
+ </html>
