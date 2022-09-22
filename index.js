@@ -118,7 +118,7 @@ var w = window.innerWidth
 var h = window.innerHeight
 
 function setup() {
-  var myCanvas = createCanvas(w + 1000, h + 450)
+  var myCanvas = createCanvas(w + 1500, h + 1000)
   myCanvas.parent('moscow')
   background(256, 20, 10)
 
