@@ -8,8 +8,6 @@
 //   }
 // }
 //
-// const params = ''
-//
 // Promise.all([
 //   fetch(
 //     'https://weatherbit-v1-mashape.p.rapidapi.com/current?lon=37.618423&lat=55.751244',
@@ -51,9 +49,30 @@
 // const tempPerm = data[3].data[0].temp
 // const tempNovosibirsk = data[4].data[0].temp
 
+const fakeMoscowDataAqi = 35
+const fakeMoscowDataTemp = 12
+const fakeMoscowDataWind = 2.91167
+
+const fakeSaintPetersburgDataAqi = 6
+const fakeSaintPetersburgDataTemp = 10
+const fakeSaintPetersburgDataWind = 1
+
+const fakeSaratovDataAqi = 15
+const fakeSaratovDataTemp = 16.7
+const fakeSaratovDataWind = 2.27027
+
+const fakePermDataAqi = 12
+const fakePermDataTemp = 13.8
+const fakePermDataWind = 3.04131
+
+const fakeIrkutskDataAqi = 43
+const fakeIrkutskDataTemp = 25.7
+const fakeIrkutskDataWind = 5.17225
+
 function placeCities(frame) {
   const moscow = document.createElement('div')
   moscow.classList.add('moscow')
+  moscow.setAttribute('id', 'moscow')
 
   const saintspetersburg = document.createElement('div')
   saintspetersburg.classList.add('saintspetersburg')
@@ -85,50 +104,23 @@ function placeCities(frame) {
   frame.appendChild(novosibirsk)
 
   moscow.appendChild(name1)
-
   saintspetersburg.appendChild(name2)
-
   saratov.appendChild(name3)
-
   perm.appendChild(name4)
-
   novosibirsk.appendChild(name5)
 }
+// Москва
 
-// function placeCityInfo() {
-//   const moscowWind = document.createElemet('h2')
-//   moscowWind.innerHTML = windMoscow
-//
-//   const moscowAqi = document.createElemet('h2')
-//   moscowAqi.innerHTML = aqiMoscow
-//
-//   const moscowTemp = document.createElemet('h2')
-//   moscowTemp.innerHTML = tempMoscow
-//
-//   moscow.appendChild(moscowWind)
-//   moscow.appendChild(moscowAqi)
-//   moscow.appendChild(moscowTemp)
-// }
-
-document.addEventListener('DOMContentLoaded', () => {
-  const container = document.getElementsByClassName('prototype_1')[0]
-  const frame = document.createElement('div')
-  const moscow = document.getElementsByClassName('moscow')
-  // const moscowWind = document.createElemet('h2')
-  // moscowWind.innerHTML = windMoscow
-  // moscow.appendChild(moscowWind)
-
-  frame.classList.add('frame')
-  container.appendChild(frame)
-  placeCities(frame)
-})
 let dots = []
 let count
-let cellSize = 40
+let cellSize = fakeMoscowDataAqi + 10
+var w = window.innerWidth
+var h = window.innerHeight
 
 function setup() {
-  createCanvas(3000, 2000)
-  background('#FF7D7D')
+  var myCanvas = createCanvas(w + 1000, h + 450)
+  myCanvas.parent('moscow')
+  background(256, 20, 10)
 
   let xCellsCount = width / cellSize
   let yCellsCount = height / cellSize
@@ -148,7 +140,8 @@ function setup() {
 }
 
 function draw() {
-  background('#FF7D7D')
+  background('#B0D9FF')
+
   for (let i = 0; i < count; i++) {
     dots[i].move()
     dots[i].display()
@@ -160,11 +153,11 @@ function createDot({
   yCount,
   cellSize,
   d = 6,
-  speed = random(0.04, 0.8)
+  speed = fakeMoscowDataWind
 }) {
   let paddingX = cellSize / 2
   let paddingY = cellSize / 2
-  let velocity = speed * 1.2
+  let velocity = fakeMoscowDataWind
   let directionX = 1
   let directionY = 1
 
@@ -184,16 +177,29 @@ function createDot({
     display() {
       let x = xCount * cellSize + paddingX
       let y = yCount * cellSize + paddingY
-      fill(0, random(0, 255), 0)
+      fill(
+        0,
+        random(0, fakeMoscowDataAqi * 10),
+        random(0, fakeMoscowDataAqi * 10)
+      )
       noStroke()
       rect(x, y, d, 6)
-      if (mouseIsPressed) {
-        noFill()
-        stroke(0, 30, 150, 50)
-        // stroke(50, 255, 0, 20);
-        line(mouseX, mouseY, x, y)
-        rect(x - paddingX, y - paddingY, cellSize, cellSize)
-      }
     }
   }
 }
+window.onresize = function () {
+  // assigns new values for width and height variables
+  w = window.innerWidth
+  h = window.innerHeight
+  canvas.size(w, h)
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const container = document.getElementsByClassName('prototype_1')[0]
+  const frame = document.createElement('div')
+
+  frame.classList.add('frame')
+  container.appendChild(frame)
+  placeCities(frame)
+  // placeMoscowInfo(frame)
+})

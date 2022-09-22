@@ -1,0 +1,80 @@
+prototypes_show {
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-end;
+  overflow: hidden;
+}
+
+body {
+  background-color: #1e476c;
+  margin: 33px;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.prototype_1 {
+}
+#defaultCanvas0 {
+  position: absolute;
+  z-index: -100;
+}
+
+.frame {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: center;
+  gap: 40px 20px;
+}
+.moscow {
+  width: 48%;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  height: 20vh;
+  align-items: center;
+  background-color: #2b68a0;
+}
+.saintspetersburg {
+  width: 48%;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  height: 20vh;
+  align-items: center;
+  background-color: #2b68a0;
+}
+.saratov {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  height: 20vh;
+  margin: 0;
+  align-items: center;
+  background-color: #2b68a0;
+}
+.novosibirsk {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  height: 20vh;
+  margin: 0;
+  align-items: center;
+  background-color: #2b68a0;
+}
+.perm {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  height: 20vh;
+  margin: 0;
+  align-items: center;
+  background-color: #2b68a0;
+}
+h1 {
+  color: white;
+  font-weight: 800;
+  font-family: 'Oswald', sans-serif;
+}
